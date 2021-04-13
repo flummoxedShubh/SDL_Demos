@@ -11,9 +11,11 @@ int main(int argc, char* args[])
 		std::cout << "SDL Init Failed, ERROR::" << SDL_GetError() << std::endl;
 
 	if(!IMG_Init(IMG_INIT_PNG))
-		std::cout << "SDL Image Init Failed" << SDL_GetError() << std::endl;
+		std::cout << "SDL Image Init Failed" << IMG_GetError() << std::endl;
 
 	RenderWindow window("SDL Demo v1.0", 1024, 768);
+
+	SDL_Texture* grassTexture = window.loadTexture("res/grass.png");
 
 	bool gameRunning = true;
 
@@ -26,6 +28,10 @@ int main(int argc, char* args[])
 			if(event.type == SDL_QUIT)
 				gameRunning = false;
 		}
+
+		window.clear();
+		window.render(grassTexture);
+		window.display();
 	}
 
 	window.cleanup();
