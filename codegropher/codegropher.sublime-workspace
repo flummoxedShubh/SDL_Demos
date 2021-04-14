@@ -4,8 +4,16 @@
 		"selected_items":
 		[
 			[
+				"w",
+				"w"
+			],
+			[
 				"p",
-				"p_title"
+				"p_x"
+			],
+			[
+				"grass",
+				"grassTexture"
 			]
 		]
 	},
@@ -57,6 +65,7 @@
 	},
 	"file_history":
 	[
+		"/E/Projects/SDL_Projects/SDL_Demos/codegropher/src/Entity.cpp",
 		"/C/Users/ishub/AppData/Roaming/Sublime Text 3/Packages/Default/exec.py"
 	],
 	"find":

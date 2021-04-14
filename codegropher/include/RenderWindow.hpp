@@ -3,6 +3,8 @@
 #include <SDL2/SDL.h>
 #include <SDL2/SDL_image.h>
 
+#include "Entity.hpp"
+
 class RenderWindow
 {
 public:
@@ -10,7 +12,7 @@ public:
 	
 	void cleanup();
 	void clear();
-	void render(SDL_Texture* p_texture);
+	void render(Entity& p_entity);
 	void display();
 
 	SDL_Texture* loadTexture(const char* p_path);
