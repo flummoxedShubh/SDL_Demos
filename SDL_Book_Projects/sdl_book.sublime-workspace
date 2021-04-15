@@ -69,6 +69,7 @@
 	},
 	"file_history":
 	[
+		"/E/Projects/SDL_Projects/SDL_Demos/codegropher/codegropher.sublime-project",
 		"/E/Projects/SDL_Projects/SDL_Demos/codegropher/codegropher.sublime-workspace",
 		"/E/Projects/SDL_Projects/SDL_Demos/codegropher/src/Entity.cpp",
 		"/C/Users/ishub/AppData/Roaming/Sublime Text 3/Packages/Default/exec.py"
@@ -134,10 +135,6 @@
 		]
 	},
 	"menu_visible": true,
-	"output.exec":
-	{
-		"height": 151.0
-	},
 	"output.find_results":
 	{
 		"height": 0.0
