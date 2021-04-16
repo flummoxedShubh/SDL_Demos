@@ -4,6 +4,8 @@
 #include <SDL2/SDL_image.h>
 #include <iostream>
 
+#include "texture_manager.hpp" 
+
 class Game
 {
 public:
@@ -24,5 +26,6 @@ private:
 	SDL_Window* m_window;
 	SDL_Renderer* m_renderer;
 
-	SDL_Texture* temp_tex;
+	int m_current_frame;
+	TextureManager m_texture_manager;
 };

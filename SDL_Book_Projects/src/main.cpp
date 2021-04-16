@@ -3,6 +3,7 @@
 #include <iostream>
 
 #include "game.hpp"
+#include "texture_manager.hpp"
 
 int main(int argc, char* args[])
 {

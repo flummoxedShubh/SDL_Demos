@@ -18,37 +18,23 @@ void Game::init(const char* title, int pos_x, int pos_y, int w, int h, int flags
 
 	SDL_SetRenderDrawColor(m_renderer, 0, 0, 0, 255);
 
-
-	//-----------
-	temp_tex = IMG_LoadTexture(m_renderer, "res/gfx/gabe-idle-run.png");
-	if(temp_tex == NULL)
-		std::cout << "TEXTURE LOAD ERROR::" << SDL_GetError() << std::endl;
-
+	m_texture_manager.load("res/gfx/gabe-idle-run.png", "gabe", m_renderer);
+	m_current_frame = 0;
 
 	m_running = true;
 }
 
 void Game::render()
 {
-	SDL_Rect src, dst;
-	src.x = 0;
-	src.y = 0;
-	src.w = 24;
-	src. h = 24;
-
-	dst.x = 0;
-	dst.y = 0;
-	dst.w = src.w * 2;
-	dst.h = src.h * 2;
-
 	SDL_RenderClear(m_renderer);
-	SDL_RenderCopy(m_renderer, temp_tex, &src, &dst);
+	m_texture_manager.draw("gabe", 0, 0, 24, 24, m_renderer);
+	m_texture_manager.drawFrame("gabe", 100, 100, 24, 24, 1, m_current_frame, m_renderer);
 	SDL_RenderPresent(m_renderer);
 }
 
 void Game::update()
 {
-
+	m_current_frame = int(((SDL_GetTicks() / 100) % 7)); 
 }
 
 void Game::handle_events()
