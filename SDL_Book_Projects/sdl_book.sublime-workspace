@@ -110,7 +110,7 @@
 	},
 	"input":
 	{
-		"height": 0.0
+		"height": 45.0
 	},
 	"layout":
 	{
@@ -135,6 +135,10 @@
 		]
 	},
 	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 151.0
+	},
 	"output.find_results":
 	{
 		"height": 0.0
