@@ -1,5 +1,8 @@
 #include "texture_manager.hpp"
 
+typedef TextureManager TheTextureManager;
+TextureManager* TextureManager::instance = 0;
+
 bool TextureManager::load(std::string filename, std::string id, SDL_Renderer* renderer)
 {
 	SDL_Texture* texture = IMG_LoadTexture(renderer, filename.c_str());

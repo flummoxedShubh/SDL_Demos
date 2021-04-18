@@ -18,7 +18,7 @@ void Game::init(const char* title, int pos_x, int pos_y, int w, int h, int flags
 
 	SDL_SetRenderDrawColor(m_renderer, 0, 0, 0, 255);
 
-	m_texture_manager.load("res/gfx/gabe-idle-run.png", "gabe", m_renderer);
+	TheTextureManager()::Instance->load("res/gfx/gabe-idle-run.png", "gabe", m_renderer);
 	m_current_frame = 0;
 
 	m_running = true;
@@ -27,8 +27,8 @@ void Game::init(const char* title, int pos_x, int pos_y, int w, int h, int flags
 void Game::render()
 {
 	SDL_RenderClear(m_renderer);
-	m_texture_manager.draw("gabe", 0, 0, 24, 24, m_renderer);
-	m_texture_manager.drawFrame("gabe", 100, 100, 24, 24, 1, m_current_frame, m_renderer);
+	TheTextureManager()::Instance->draw("gabe", 0, 0, 24, 24, m_renderer);
+	TheTextureManager()::Instance->drawFrame("gabe", 100, 100, 24, 24, 1, m_current_frame, m_renderer);
 	SDL_RenderPresent(m_renderer);
 }
 
