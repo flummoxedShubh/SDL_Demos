@@ -18,6 +18,7 @@ int main(int argc, char* args[])
 	RenderWindow window("SDL Demo v1.0", 1024, 768);
 
 	SDL_Texture* grassTexture = window.loadTexture("res/grass.png");
+	SDL_Texture* devaTexture = window.loadTexture("res/deva.png");
 
 /*
 	Entity entity[4] = {
@@ -31,7 +32,8 @@ int main(int argc, char* args[])
 		Entity(400, 100, grassTexture),
 		Entity(0, 100, grassTexture),
 		Entity(64, 100, grassTexture),
-		Entity(200, 600, grassTexture)
+		Entity(200, 600, grassTexture),
+		Entity(300,300, devaTexture)
 	};
 
 	bool gameRunning = true;
